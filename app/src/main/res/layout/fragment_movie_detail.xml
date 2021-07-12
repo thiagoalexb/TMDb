@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.moviedetail.MovieDetailFragment">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/movie_backdrop_image_view"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/color_default_EBEBEB"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/film_poster_placeholder" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_backdrop_image_view"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_title_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_title_text_view"
+                tools:text="Titulo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_overview_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/overview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_title_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_overview_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_overview_text_view"
+                tools:text="Overview" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_vote_average_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/overview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_overview_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_vote_average_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_vote_average_text_view"
+                tools:text="VoteAverage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_release_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/release_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_vote_average_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_release_date_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_release_date_text_view"
+                tools:text="ReleaseDate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_runtime_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/runtime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_release_date_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_runtime_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_runtime_text_view"
+                tools:text="RunTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_budget_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/budget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_runtime_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_budget_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_budget_text_view"
+                tools:text="Budget" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_revenue_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/revenue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_budget_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_revenue_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_revenue_text_view"
+                tools:text="Revenue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_genres_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/genres"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_revenue_value_text_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movie_genres_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_genres_text_view"
+                tools:text="Genres" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

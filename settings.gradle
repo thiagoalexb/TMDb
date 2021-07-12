@@ -1,0 +1,4 @@
+rootProject.name = "TMDb"
+include ':app'
+include ':domain'
+include ':data'
